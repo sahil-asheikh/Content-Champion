@@ -148,7 +148,8 @@
 
         <div class="row">
           <div class="col-xl-5 col-lg-6 d-flex justify-content-center video-box align-items-stretch position-relative">
-            <a href="https://youtu.be/lTRiuFIWV54" class="glightbox play-btn mb-4"></a>
+            <!-- uncomment this of you want to add a youtube play video button -->
+            <!-- <a href="https://youtu.be/lTRiuFIWV54" class="glightbox play-btn mb-4"></a> -->
           </div>
 
           <div
@@ -295,7 +296,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-cash-stack" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Textbook Solutions</a></h4>
+              <h4 class="title">Textbook Solutions</h4>
               <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
                 occaecati cupiditate non provident</p> -->
             </div>
@@ -303,7 +304,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-calendar4-week" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Lecture E planner</a></h4>
+              <h4 class="title">Lecture E planner</h4>
               <!-- <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat tarad limino ata</p> -->
             </div>
@@ -312,7 +313,7 @@
           <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-chat-text" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Study Material</a></h4>
+              <h4 class="title">Study Material</h4>
               <!-- <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur</p> -->
             </div>
@@ -320,7 +321,7 @@
           <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-credit-card-2-front" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Practice Questions</a></h4>
+              <h4 class="title">Practice Questions</h4>
               <!-- <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum</p> -->
             </div>
@@ -329,7 +330,7 @@
           <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Online Doubt Lectures</a></h4>
+              <h4 class="title">Online Doubt Lectures</h4>
               <!-- <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                 praesentium voluptatum deleniti atque</p> -->
             </div>
@@ -337,7 +338,7 @@
           <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Home Tution</a></h4>
+              <h4 class="title">Home Tution</h4>
               <!-- <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
                 soluta nobis est eligendi</p> -->
             </div>
@@ -738,7 +739,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form class="pure-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -751,14 +752,18 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <!-- <div class="loading">Loading...</div> -->
+                <div id="error-message" class="error-message text-light" style="display: none;">
+                  Sorry message has not been sent because of some external issue.
+                </div>
+                <div id="sent-message" class="sent-message text-light" style="display: none;">
+                  Your message has been sent. Thank you!
+                </div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="btn btn-primart text-center"><button type="submit">Send Message</button></div>
             </form>
 
           </div>
@@ -830,7 +835,7 @@
         &copy; 2021 Copyright <strong><span>Content Champion</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Developed by <a href="https://begawo.com/" target="_"><strong>Begawo Soft</strong></a>
+        Developed by <a href="https://begawosoft.com/" target="_"><strong>Begawo Soft</strong></a>
       </div>
     </div>
   </footer>
@@ -851,5 +856,8 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<!-- Conto-Bot form js -->
+<script src="assets/js/tg-form.js"></script>
 
 </html>
